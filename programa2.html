@@ -1,0 +1,26 @@
+<canvas width="600"  height="400"></canvas>
+<script>
+	function desenhaQuandrado(X, Y, cor) {
+		
+		var tela = document.querySelector('canvas');
+		var pincel = tela.getContext('2d');
+
+		pincel.fillStyle = cor;
+		//              X, Y, A,  L
+		pincel.fillRect(X, Y, 50, 50);
+		pincel.fillStrock ='black';
+		pincel.strokeRect(X, Y, 50, 50);
+	}
+	/*
+	var X = 0;
+	while(X < 600){
+		desenhaQuandrado(X, 0, 'green');
+		X = X + 50;
+	}
+	*/
+
+	for (var x = 0; x < 600; x = x + 50) {
+		desenhaQuandrado(x, 0, 'green');
+	}
+	
+</script>
